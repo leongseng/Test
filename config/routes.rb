@@ -1,10 +1,13 @@
 Ihr::Application.routes.draw do
+  get "ihr/index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
+  match 'accounts' => 'users'
 
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
@@ -12,6 +15,7 @@ Ihr::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+  resources :user_sessions, :users
 
   # Sample resource route with options:
   #   resources :products do
@@ -49,6 +53,7 @@ Ihr::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   # root :to => "welcome#index"
+  root :to => 'user_sessions#new'
 
   # See how all your routes lay out with "rake routes"
 

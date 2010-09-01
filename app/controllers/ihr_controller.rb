@@ -1,5 +1,5 @@
 class IhrController < ApplicationController
-  def Index 
-    @title = "This is a test!"
+  def index
   end
+
 end
