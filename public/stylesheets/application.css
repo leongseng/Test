@@ -1,0 +1,86 @@
+h1, h2, h3, h4 { font-family: Verdana, sans-serif;}
+#top-menu {background: maroon; color: #fff; height:1.8em; font-size: 0.8em; padding: 2px 2px 0px 6px;}
+#top-menu ul {margin: 0;  padding: 0;}
+#top-menu li {
+  float:left;
+  list-style-type:none;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  white-space:nowrap;
+}
+#top-menu a {color: #fff; margin-right: 8px; font-weight: bold;}
+#top-menu #loggedas { float: right; margin-right: 0.5em; color: #fff; }
+
+#header {
+  float: left;
+  margin: 5px 0px 0px 0px;
+  padding: 5px 10px 5px 150px;
+  width: 100%;
+  background: url("../images/ihis-logo.gif") no-repeat left top;
+  background-color: #FCF3F8;
+  color: #f8f8f8;
+}
+#header a {color:#f8f8f8;}
+#header h1 { font-size:300%; margin-left: 10px }
+
+/*- Menu Tabs - */
+    #tabsD {
+      float:left;
+      width:100%;
+      background:#FCF3F8;
+      font-size:93%;
+      font-weight:bold;
+      line-height:normal;
+          border-bottom:1px solid #D16587;
+      }
+    #tabsD ul {
+        margin:0;
+        padding:0px 10px 0px 150px;
+        list-style:none;
+      }
+    #tabsD li {
+      display:inline;
+      margin:0;
+      padding:0;
+      }
+    #tabsD a {
+      float:left;
+      background:url("../images/tab-menu-left.gif") no-repeat left top;
+      margin:0;
+      padding:0 0 0 4px;
+      text-decoration:none;
+      }
+    #tabsD a span {
+      float:left;
+      display:block;
+      background:url("../images/tab-menu-right.gif") no-repeat right top;
+      padding:5px 15px 4px 10px;
+      color:#800517;
+      }
+    /* Commented Backslash Hack hides rule from IE5-Mac \*/
+    #tabsD a span {float:none;}
+    /* End IE5-Mac hack */
+    #tabsD a:hover span {
+      color:#800517;
+      }
+    #tabsD a:hover {
+      background-position:0% -42px;
+      margin: 0 0 -1px 0;
+      border-bottom:1px solid white;
+      text-decoration: underline;
+      }
+    #tabsD a:hover span {
+      background-position:100% -42px;
+      }
+
+    #tabsD #current a {
+      background-position:0% -42px;
+      margin: 0 0 -1px 0;
+      border-bottom:1px solid white;
+    }
+    #tabsD #current a span {
+      background-position:100% -42px;
+    }
+
+
+#footer {clear: both; border-top: 1px solid #bbb; font-size: 0.9em; color: #aaa; padding: 5px; text-align:center; background: #fff;}
