@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <title>IHiS iHR</title>
   <!--[if lt IE 9]>
@@ -14,32 +15,31 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-<div id="top-menu">
-  <div id="account">
-      Test 
-  </div>
-</div>
-<div id="header">
-  <h1>iHR</h1>
-</div>
-  <div id="tabsD">
-   <ul>
-     <!-- CSS Tabs -->
-     <li><a href="Home.html"><span>Home</span></a></li>
-     <li><a href="Products.html"><span>Products</span></a></li>
-     <li id="current"><a href="Services.html"><span>Services</span></a></li>
-     <li><a href="Support.html"><span>Support</span></a></li>
-     <li><a href="Order.html"><span>Order</span></a></li>
-     <li><a href="News.html"><span>News</span></a></li>
-     <li><a href="About.html"><span>About</span></a></li>
-   </ul>
-  </div>
-
-<%= yield %>
-
-<div id="footer">
-    Powered by IHiS Pte Ltd&copy; 2010 Ong Leong Seng 
-</div>
-
+	<div id="top-menu">
+	  <div id="account">
+	      <%= link_to "Login", login_path %> |
+	      <%= link_to "Register", register_path %>
+	  </div>
+	</div>
+	<div id="header">
+	  <h1>iHR Portal</h1>
+	</div>
+	<div id="tabsD">
+		<ul>
+			 <!-- CSS Tabs -->
+			 <li><a href="Profile.html"><span>Profile</span></a></li>
+			 <li><a href="Products.html"><span>Leave</span></a></li>
+			 <li id="current"><a href="Services.html"><span>Services</span></a></li>
+			 <li><a href="Support.html"><span>Claim</span></a></li>
+			 <li><a href="Order.html"><span>Performance</span></a></li>
+			 <li><a href="News.html"><span>Reports</span></a></li>
+		</ul>
+	</div>
+	<div id="mainpage">
+		<%= yield %>
+	</div>
+	<div id="footer">
+	    Maintained by Ong Leong Seng (Part-Time Programmer), IHiS Pte Ltd&copy; 2010
+	</div>
 </body>
 </html>

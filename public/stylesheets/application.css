@@ -2,32 +2,32 @@ h1, h2, h3, h4 { font-family: Verdana, sans-serif;}
 #top-menu {background: maroon; color: #fff; height:1.8em; font-size: 0.8em; padding: 2px 2px 0px 6px;}
 #top-menu ul {margin: 0;  padding: 0;}
 #top-menu li {
-  float:left;
   list-style-type:none;
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 0px 0px;
   white-space:nowrap;
 }
-#top-menu a {color: #fff; margin-right: 8px; font-weight: bold;}
-#top-menu #loggedas { float: right; margin-right: 0.5em; color: #fff; }
+#top-menu a {color: #fff; float: right;}
+#top-menu #loggedas { float: right; margin-right: 10px; color: #fff; }
 
 #header {
   float: left;
-  margin: 5px 0px 0px 0px;
-  padding: 5px 10px 5px 150px;
+  margin-top: 5px;
+  padding-top: 10px;
+  padding-bottom: 20px;
   width: 100%;
-  background: url("../images/ihis-logo.gif") no-repeat left top;
-  background-color: #FCF3F8;
+  background: url("../images/ihis-logo.gif") no-repeat 8px 2px;
+  background-color: white;
   color: #f8f8f8;
 }
-#header a {color:#f8f8f8;}
-#header h1 { font-size:300%; margin-left: 10px }
+#header a {color:#f8f8f8; text-align: right;}
+#header h1 { font-family: "MS Trebuchet", sans-serif; font-size:200%; font-weight: bold; text-align: right; margin-right: 10px }
 
 /*- Menu Tabs - */
     #tabsD {
       float:left;
       width:100%;
-      background:#FCF3F8;
+      background:white;
       font-size:93%;
       font-weight:bold;
       line-height:normal;
@@ -82,5 +82,8 @@ h1, h2, h3, h4 { font-family: Verdana, sans-serif;}
       background-position:100% -42px;
     }
 
+#mainpage {	margin-top: 100px; margin-left: 155px;}
+#leftsidebar {position: absolute; width: 150px;}
+body { background-color: #fff; color: #333; }
 
 #footer {clear: both; border-top: 1px solid #bbb; font-size: 0.9em; color: #aaa; padding: 5px; text-align:center; background: #fff;}

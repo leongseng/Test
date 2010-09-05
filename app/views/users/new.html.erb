@@ -1,8 +1,9 @@
 <h1>Register</h1>
-
-<% semantic_form_for @user, :url => new_user_path do |f| %>
-  <%= f.error_messages %>
-  <%= render :partial => "form", :object => f %>
-  <%= f.buttons :commit %>
-<% end %>
-
+<fieldset>
+	<legend>Register new or against an Active Directory</legend>
+	<% semantic_form_for @user, :url => new_user_path do |f| %>
+		<%= f.error_messages %>
+		<%= render :partial => "form", :object => f %>
+		<%= f.buttons :commit %>
+	<% end %>
+</fieldset>

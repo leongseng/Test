@@ -3,8 +3,8 @@ class CreateUsers < ActiveRecord::Migration
     create_table :users do |t|
       t.string    :login,               :null => false                
       t.string    :email,               :null => false               
-      t.string    :crypted_password,    :null => false              
-      t.string    :password_salt,       :null => false             
+      t.string    :crypted_password                      # can be null if using Directory Server for Authentication              
+      t.string    :password_salt                         # can be null if using Directory Server for Authentication
       t.string    :persistence_token,   :null => false   # required
       t.string    :single_access_token, :null => false   # optional, see Authlogic::Session::Params
       t.string    :perishable_token,    :null => false   # optional, see Authlogic::Session::Perishability
@@ -18,6 +18,8 @@ class CreateUsers < ActiveRecord::Migration
       t.datetime  :last_login_at
       t.string    :current_login_ip
       t.string    :last_login_ip
+      t.string    :directory_server,     :null => false, :default => "local"   # LDAP Host if specified
+      t.timestamps
     end
   end
 

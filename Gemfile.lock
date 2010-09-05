@@ -32,6 +32,8 @@ GEM
       rack-mount (~> 0.6.12)
       rack-test (~> 0.5.4)
       tzinfo (~> 0.3.23)
+    activeldap (1.0.9)
+      activerecord
     activemodel (3.0.0)
       activesupport (= 3.0.0)
       builder (~> 2.1.2)
@@ -56,6 +58,8 @@ GEM
       mime-types
       treetop (>= 1.4.5)
     mime-types (1.16)
+    net-ldap (0.1.1)
+    nifty-generators (0.4.0)
     polyglot (0.3.1)
     rack (1.2.1)
     rack-mount (0.6.12)
@@ -88,7 +92,10 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  activeldap (= 1.0.9)
   authlogic!
   formtastic!
+  net-ldap (>= 0.0.5)
+  nifty-generators
   rails (= 3.0.0)
   sqlite3-ruby

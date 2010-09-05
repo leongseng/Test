@@ -12,3 +12,40 @@ The following style may be *conditionally* included for improved support on olde
 form.formtastic fieldset ol li fieldset legend { margin-left: -6px;}
 
 --------------------------------------------------------------------------------------------------*/
+html legend { 
+	position:absolute; 
+	top: -1em; 
+	left: .5em; 
+} 
+
+html fieldset { 
+	position: relative; 
+	width: 500px;
+	margin-top:3em; 
+	padding-top:3em; 
+	padding-bottom: 1em; 
+	font-family: "Century Gothic", "Gill San", Arial, sans-serif;
+} 
+
+/* Form Styles */ 
+legend { 
+	color: white; 
+	background: maroon; 
+	padding: .4em 1em; 
+} 
+
+label {
+	width: 120px;
+	float: left;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	text-align: right;
+	margin-right: 15px;
+	font-weight: bold;
+	display: block;
+}
+
+form.formtastic input {font-family: Arial, sans-serif; padding-top: 3px; padding-bottom: 3px;}
+form.formtastic li {list-style: none;}
+form.formtastic fieldset > ol > li.required {color: red; }
+form.formtastic fieldset.buttons {margin-left: 10px;}

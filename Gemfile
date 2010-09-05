@@ -7,8 +7,11 @@ gem 'rails', '3.0.0'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
+gem 'nifty-generators'
 gem 'authlogic', :git => 'git://github.com/binarylogic/authlogic.git'
 gem 'formtastic', :git => "git://github.com/justinfrench/formtastic.git", :branch => "rails3"
+gem 'net-ldap', '>=0.0.5'
+gem 'activeldap', '1.0.9'
 
 
 # Use unicorn as the web server
