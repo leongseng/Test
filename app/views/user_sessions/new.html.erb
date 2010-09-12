@@ -1,19 +1,23 @@
-<h2>Login</h2>
+<% title "Login" %>
 <fieldset>
 	<legend>Enter Your Login Details</legend>
-	<% semantic_form_for :user_session do |f| %>
-		<%= f.input :login, :input_html => { :value => "login ID", :class => 'hintremoval' } %>
-		<br />
-		<%= f.input :password, :hint => "Please use your AD password" %>
-		<br />
+	<% form_for :user_session do |f| %>
+		<%= f.error_messages %>
 		<div class="form_row">
-		  <label for="remember_me">Remember Me?</label>
-		  <%= f.check_box :remember_me %>
+			<%= f.label :login %>
+			<%= f.text_field :login %>
 		</div>
 		<br />
-		<% f.buttons do %>
-			<%= f.commit_button "Login" %>
-		<% end %>
+		<div class="form_row">
+			<%= f.label :password %>
+			<%= f.password_field :password %>
+		</div>
+		<br />
+		<div class="form_row">
+			<%= f.check_box :remember_me %><%= f.label :remember_me %><br />
+		</div>
+		<br />
+		<%= f.submit "Login" %>
 	<% end %>
 </fieldset>
 

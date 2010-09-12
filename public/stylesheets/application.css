@@ -7,8 +7,8 @@ h1, h2, h3, h4 { font-family: Verdana, sans-serif;}
   padding: 0px 0px 0px 0px;
   white-space:nowrap;
 }
-#top-menu a {color: #fff; float: right;}
-#top-menu #loggedas { float: right; margin-right: 10px; color: #fff; }
+#top-menu a {color: #fff; text-decoration: none;}
+#top-menu #account { float: right; margin-right: 10px; color: #fff; font-size: 10px;}
 
 #header {
   float: left;
@@ -82,8 +82,56 @@ h1, h2, h3, h4 { font-family: Verdana, sans-serif;}
       background-position:100% -42px;
     }
 
-#mainpage {	margin-top: 100px; margin-left: 155px;}
-#leftsidebar {position: absolute; width: 150px;}
 body { background-color: #fff; color: #333; }
-
+#container {height: 100%; }
+#leftsidebar {float:left; width: 150px; background-color: #E8E6DA; padding-bottom: 1000em; margin-bottom: -999.5em; }
+#leftsidebar ul li {list-style: none; }
+#mainpage { margin-left: 150px; padding-left: 10px; padding-top: 110px; background-color: #fff;}
 #footer {clear: both; border-top: 1px solid #bbb; font-size: 0.9em; color: #aaa; padding: 5px; text-align:center; background: #fff;}
+
+#flash_notice, #flash_error, #flash_alert {
+  padding: 5px 8px;
+  margin: 10px 0;
+}
+
+#flash_notice {
+  background-color: #CFC;
+  border: solid 1px #6C6;
+}
+
+#flash_error, #flash_alert {
+  background-color: #FCC;
+  border: solid 1px #C66;
+}
+
+.fieldWithErrors {
+  display: inline;
+}
+
+.error_messages {
+  width: 400px;
+  border: 2px solid #CF0000;
+  padding: 0px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  font-size: 12px;
+}
+
+.error_messages h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 10px;
+  font-size: 12px;
+  margin: 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+.error_messages p {
+  margin: 8px 10px;
+}
+
+.error_messages ul {
+  margin: 0;
+}

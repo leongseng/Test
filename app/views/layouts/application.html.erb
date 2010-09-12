@@ -2,7 +2,6 @@
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>IHiS iHR</title>
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->    
@@ -17,8 +16,13 @@
 <body>
 	<div id="top-menu">
 	  <div id="account">
-	      <%= link_to "Login", login_path %> |
-	      <%= link_to "Register", register_path %>
+		<% if current_user %>
+		  <%= link_to "My Profile", users_path %> |
+		  <%= link_to "Logout", logout_path %>
+		<% else %>
+	      <%= link_to "Register", register_path %> |
+	      <%= link_to "Login", login_path %>
+	  	<% end %>
 	  </div>
 	</div>
 	<div id="header">
@@ -35,8 +39,21 @@
 			 <li><a href="News.html"><span>Reports</span></a></li>
 		</ul>
 	</div>
-	<div id="mainpage">
-		<%= yield %>
+	<div id="container">
+		<div id="leftsidebar">
+			<ul>
+				<li><%= link_to root_url %></li>
+				<li><%= link_to users_path %></li>
+				<li><%= link_to employees_path %></li>
+			</ul>
+		</div>
+	    <div id="mainpage">
+			<%= content_tag :h2, yield(:title) if show_title? %>
+			<% flash.each do |name, msg| %>
+		      <%= content_tag :div, msg, :id => "flash_#{name}" %>
+		    <% end %>
+			<%= yield %>
+		</div>
 	</div>
 	<div id="footer">
 	    Maintained by Ong Leong Seng (Part-Time Programmer), IHiS Pte Ltd&copy; 2010
